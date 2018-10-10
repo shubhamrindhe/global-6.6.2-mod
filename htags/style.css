@@ -1,0 +1,193 @@
+/*
+ * Copyright (c) 2005, 2010, 2011 Tama Communications Corporation
+ *
+ * This file is free software; as a special exception the author gives
+ * unlimited permission to copy and/or distribute it, with or without
+ * modifications, as long as this notice is preserved.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY, to the extent permitted by law; without even the
+ * implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ */
+/*
+ * Souce code
+ */
+body		{ color: #191970;  background-color: none; width:90%; padding:0 5%;}
+a.visited	{ color: gray; }
+.title		{ color: #cc0000; }
+.poweredby	{ text-align: right; }
+.error		{ color: red; }
+.loading	{ color: white; background-color: red; }
+.cvs		{ font-size: 90%; }
+.caution	{ text-align: center; margin: 1em 40px; }
+img.icon	{ vertical-align: top; border: 0; }
+.curline:hover	{ background-color:lightgray; border-radius:5px;padding:2px;margin:2px; }
+table.flist	{ border-spacing: 2px; width: 100%; }
+/*
+ * Parts
+ */
+em		{ font-style: normal; }
+em.comment	{ color: green; font-style: italic; }
+em.sharp	{ color: #4B0082; }
+em.brace	{ color: red; }
+em.warned	{ background-color: yellow; }
+em.string	{ text-decoration: underline; }
+strong.reserved	{ font-weight: bold; color: red;}
+/*
+ * Tag list using table (--table-list)
+ */
+th, td		{ white-space: nowrap; }
+th.tag		{ text-align: left; }
+th.line		{ text-align: right; }
+th.file		{ text-align: left; }
+th.code		{ text-align: left; }
+td.tag		{ text-align: left; }
+td.line		{ text-align: right; }
+td.file		{ text-align: left; }
+td.code		{ text-align: left; }
+/* end of TAG LIST */
+/*
+ * Fixed guide (--fixed-guide)
+ */
+#guide {
+	height: 35px;
+	position: fixed;
+	bottom:0px; left:0px; right:0px;
+	background: #f5f5dc;
+	border: 1px solid #ccc;
+}
+#guide ul {
+	height: 25px;
+	margin: 5px;
+	width: 90%;
+}
+#guide ul li {
+	float: left;
+	display: inline;
+	margin: 1px 1px;
+}
+#guide a {
+	line-height: 24px;
+}
+#guide ul li.standout span {
+	margin: 0px 4px;
+	font-size: 115%;
+	font-weight: bold;
+}
+/* end of FIXED GUIDE */
+
+
+a:after{
+	content:attr(href);
+	visibility: hidden;
+    	width: auto;
+    	background-color: black;
+    	color: #fff;
+    	text-align: center;
+    	border-radius: 6px;
+    	padding: 5px 0;
+    	/* Position the tooltip */
+    	position: absolute;
+    	z-index: 1;
+}
+a:hover:after{
+    	visibility: visible;
+}
+
+
+
+
+.codeBlock:hover{
+	background-color: rgba(180,180,180,0.3);
+	border:2px solid rgba(180,180,180,0.9);
+	border-radius:10px;
+	padding:2px;
+	margin:3px;
+	transform:scale(1.01);
+	/*box-shadow:0px -13px 2px 1px rgba(180,180,180,0.7);*/
+	transition-duration:0.1s;
+}
+
+
+
+
+input[type="checkbox"]{
+	transition-duration:0.1s;
+}
+
+input[type="checkbox"]:not(:checked) +label+div{
+	display : none;
+}
+input[type="checkbox"]:checked +label+div{
+	display : block;
+	
+}
+/*
+input[type="checkbox"]:not(:checked)+label:after{
+	content:"{...}";
+	display : block; 
+	position:relative;
+	left:100%;
+
+}
+input[type="checkbox"]:checked+label:after{
+	content:"{...}";
+	display : none;
+}
+*/
+
+/*
+input[type="checkbox"]:not(:checked) + em {
+	display : block;
+}
+input[type="checkbox"]:checked + em {
+	display : none;
+}*/
+
+
+
+input[type="checkbox"]{
+	display : none;
+}
+.blockLabel{
+	display:inline-block;
+	padding:1px 5px;
+	border:1px solid rgba(0,0,0,0.8);
+	color:rgba(0,0,0,1);
+	background:rgba(0,0,0,0.3);
+	border-radius:5px;
+}
+	
+.blockLabel:hover{
+	background:rgba(0,0,0,0.8);
+	color:#fff;	
+}
+input[type="checkbox"]:checked + label:before{
+	display:block;
+	content:"-";
+}
+input[type="checkbox"]:not(:checked) + label:before{
+	display:block;
+	content:"{...}";
+}
+
+
+.tooltip{
+	position :absolute;
+	width : auto;
+	height :auto;
+	background :lightblue;
+	padding:25px;
+	visibility:hidden;
+	border-radius:20px;
+}
+
+.tooltip strong{
+}
+.tooltip a{
+}
+
+
+
+
+
